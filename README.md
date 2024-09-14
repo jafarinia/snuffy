@@ -381,7 +381,7 @@ python n_shot_dataset_maker_tcga.py --shots 5
       <td><a href="https://github.com/binli123/dsmil-wsi">Refer to DSMIL</a></td>
       <td><a href="https://drive.usercontent.google.com/download?id=1ZlnQvPuJQwbNs3Lr7g-85K4NsHNjIqzc&export=download&authuser=0&confirm=t&uuid=0d6b88b7-d939-4d40-b02e-530bf0b24bfe&at=APZUnTWeGEIHhy1zxlMp3bNkKF4x:1723220335820">Weights</a></td>
       <td>
-         <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/SimCLR_dsmil_simclr.pth">Embeddings</a></td>
+         <a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/SimCLR_dsmil_simclr.pth">Embeddings</a>
       </td>
    </tr>
 
