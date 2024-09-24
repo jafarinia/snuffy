@@ -381,7 +381,7 @@ python n_shot_dataset_maker_tcga.py --shots 5
       <td><a href="https://github.com/binli123/dsmil-wsi">Refer to DSMIL</a></td>
       <td><a href="https://drive.usercontent.google.com/download?id=1ZlnQvPuJQwbNs3Lr7g-85K4NsHNjIqzc&export=download&authuser=0&confirm=t&uuid=0d6b88b7-d939-4d40-b02e-530bf0b24bfe&at=APZUnTWeGEIHhy1zxlMp3bNkKF4x:1723220335820">Weights</a></td>
       <td>
-         <a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/SimCLR_dsmil_simclr.pth">Embeddings</a>
+         <a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/SimCLR_dsmil_simclr.7z">Embeddings</a>
       </td>
    </tr>
 
@@ -389,27 +389,25 @@ python n_shot_dataset_maker_tcga.py --shots 5
       <td>DINO (From Scratch)</td>
       <td><a href="https://github.com/facebookresearch/dino">Refer to DINO</a> (And use a ViT-S/16)</td>
       <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embedders/camelyon16/dino_scratch.pth">Weights</a></td>
-      <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/DINO_dino_scratch.pth">Embeddings</a></td>
+      <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/DINO_dino_scratch.7z">Embeddings</a></td>
    </tr>
 
    <tr>
          <td>DINO (with Adapter)</td>
          <td><a href="#dino-with-adapter">Refer to DINO with Adapter Section</a></td>
          <td>
-               <a href="https://dl.fbaipublicfiles.com/dino/dino_deitsmall8_pretrain/dino_deitsmall8_pretrain_full_checkpoint.pth">ImageNet-1K Pretrained ViT-S8 Weights</a> |
-               <a href="https://huggingface.co/nialda/snuffy/blob/main/embedders/camelyon16/dino_adapter.pth">Trained Weights</a>
+               <a href="https://huggingface.co/nialda/snuffy/blob/main/embedders/camelyon16/dino_adapter.pth">Weights</a>
          </td>
-         <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/DINO_dino_adapter.pth">Embeddings</a></td>
+         <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/DINO_dino_adapter.7z">Embeddings</a></td>
    </tr>
 
    <tr>
          <td>MAE (with Adapter)</td>
          <td><a href="#mae-with-adapter">Refer to MAE with Adapter Section</a></td>
          <td>
-            <a href="https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base_full.pth">ImageNet-1K Pretrained ViT-S8 Weights</a> |
-            <a href="https://huggingface.co/nialda/snuffy/blob/main/embedders/camelyon16/mae_adapter.pth">Trained Weights</a>
+            <a href="https://huggingface.co/nialda/snuffy/blob/main/embedders/camelyon16/mae_adapter.pth">Weights</a>
          </td>
-         <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/MAE_mae_adapter.pth">Embeddings</a></td>
+         <td><a href="https://huggingface.co/nialda/snuffy/blob/main/embeddings/camelyon16/MAE_mae_adapter.7z">Embeddings</a></td>
    </tr>
 </tbody>
 </table>
@@ -422,7 +420,7 @@ Download DINO ImageNet-1K Pretrained ViT-S8 full wights:
 wget https://dl.fbaipublicfiles.com/dino/dino_deitsmall8_pretrain/dino_deitsmall8_pretrain_full_checkpoint.pth
 ```
 
-Continue Pre-training with DINO Adapter:
+Continue pretraining with DINO Adapter:
 
 ```bash
 python dino_adapter/main_dino_adapter.py \
@@ -456,7 +454,7 @@ Download MAE ImageNet-1K Pretrained ViT-S8 full wights:
 wget https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base_full.pth
 ```
 
-Continue Pre-training with MAE Adapter:
+Continue pretraining with MAE Adapter:
 
 ```bash
 torchrun main_pretrain_adapter.py \
@@ -472,7 +470,7 @@ torchrun main_pretrain_adapter.py \
 
 ## Feature Extraction
 
-This `compute_feats.py` script extracts features (embeddings) from a dataset using a specified embedder model. It
+The `compute_feats.py` script extracts features (embeddings) from a dataset using a specified embedder model. It
 processes the dataset and
 saves the cleaned embedder weights, feature vectors, and corresponding labels.
 
