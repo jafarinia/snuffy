@@ -204,6 +204,7 @@ pyrightconfig.json
 *.tif
 # **/datasets
 *.csv
+!datasets/camelyon16/reference.csv
 !datasets/tcga/single/patients.csv
 *.svs
 *.jpeg
